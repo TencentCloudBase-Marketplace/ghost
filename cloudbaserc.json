@@ -1,0 +1,48 @@
+{
+  "version": "2.0",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "ghost",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "customLogs": "/tmp/*",
+          "serviceName": "ghost",
+          "servicePath": "/",
+          "uploadType": "image",
+          "containerPort": 2368,
+          "imageInfo": {
+            "imageUrl": "ghost:2.38.2"
+          },
+          "envVariables": {
+            "database__client": "mysql",
+            "database__connection__database": "ghost",
+            "logging__path": "/tmp"
+          },
+          "volumeMounts": {
+            "/var/lib/ghost": "GHOST_CFS"
+          }
+        }
+      }
+    },
+    "requirement": {
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "GHOST_CFS"
+        },
+        {
+          "type": "CynosDB",
+          "name": "Ghost",
+          "envMap": {
+            "IP": "database__connection__host",
+            "PORT": "database__connection__port",
+            "USERNAME": "database__connection__user",
+            "PASSWORD": "database__connection__password"
+          }
+        }
+      ]
+    }
+  }
+}
