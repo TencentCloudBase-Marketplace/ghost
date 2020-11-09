@@ -21,7 +21,7 @@
             "logging__path": "/tmp"
           },
           "volumeMounts": {
-            "/var/lib/ghost": "GHOST_CFS"
+            "/var/lib/ghost": "ghost-cfs"
           }
         }
       }
@@ -30,7 +30,7 @@
       "addons": [
         {
           "type": "CFS",
-          "name": "GHOST_CFS"
+          "name": "ghost-cfs"
         },
         {
           "type": "CynosDB",
