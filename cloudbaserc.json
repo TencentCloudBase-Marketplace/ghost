@@ -34,7 +34,7 @@
         },
         {
           "type": "CynosDB",
-          "name": "Ghost",
+          "name": "ghost",
           "envMap": {
             "IP": "database__connection__host",
             "PORT": "database__connection__port",
