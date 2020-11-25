@@ -19,6 +19,9 @@
             "database__client": "mysql",
             "database__connection__database": "ghost",
             "logging__path": "/tmp"
+          },
+          "volumeMounts": {
+            "/var/lib/ghost/content": "ghost-cfs"
           }
         }
       }
