@@ -13,7 +13,7 @@
           "uploadType": "image",
           "containerPort": 2368,
           "imageInfo": {
-            "imageUrl": "ghost:2.38.2"
+            "imageUrl": "ghost:3.38.3"
           },
           "envVariables": {
             "database__client": "mysql",
