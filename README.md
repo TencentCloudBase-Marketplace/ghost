@@ -22,7 +22,7 @@ Ghost 是一套基于 Node.js 构建的开源博客平台（Open source blogging
 - `database__connection__database`： 数据库名称
 - `logging__path`：日志路径
 
-更多配置参考：https://ghost.org/docs/concepts/config/
+更多配置参考：https://ghost.org/docs/config/
 
 ### 依赖
 
