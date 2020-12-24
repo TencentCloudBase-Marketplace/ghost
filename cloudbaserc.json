@@ -1,3 +1,4 @@
+
 {
   "version": "2.0",
   "envId": "{{env.ENV_ID}}",
@@ -18,7 +19,8 @@
           "envVariables": {
             "database__client": "mysql",
             "database__connection__database": "ghost",
-            "logging__path": "/tmp"
+            "logging__path": "/tmp",
+            "url": "{{env.url}}"
           },
           "volumeMounts": {
             "/var/lib/ghost/content": "ghost-cfs"
@@ -42,7 +44,14 @@
             "PASSWORD": "database__connection__password"
           }
         }
-      ]
+      ],
+      "environment": {
+        "url": {
+          "description": "网站访问地址",
+          "required": true,
+          "default": "http://localhost:2369"
+        }
+      }
     }
   }
 }
