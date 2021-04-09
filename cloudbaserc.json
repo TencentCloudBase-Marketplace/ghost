@@ -14,7 +14,7 @@
           "uploadType": "image",
           "containerPort": 2368,
           "imageInfo": {
-            "imageUrl": "ghost:3.38.3"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcb_public/ghost:3.38.3"
           },
           "envVariables": {
             "database__client": "mysql",
